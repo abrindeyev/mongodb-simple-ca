@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Tested On:
 #	OS: Mac OS X [10.10.5 (14F27), 10.13.1]
