@@ -148,6 +148,7 @@ ROOT_CA_CRT_DER="$ROOT_CA_CERTS/root.ca.crt.der"
 ROOT_CA_CRL="$ROOT_CA_CRL_DIR/ca.crl.pem"
 ROOT_CA_CRL_NUMBER="$ROOT_CA_HOME/crlnumber"
 ROOT_CA_CRL_DAYS="3650"
+ROOT_CA_CERT_DAYS="824" # https://support.apple.com/en-us/HT210176
 
 function create_and_sign_cert() {
   local type="$1"
@@ -310,7 +311,7 @@ default_md        = sha256
 
 name_opt          = ca_default
 cert_opt          = ca_default
-default_days      = $ROOT_CA_CRL_DAYS
+default_days      = $ROOT_CA_CERT_DAYS
 preserve          = no
 policy            = policy_strict
 
